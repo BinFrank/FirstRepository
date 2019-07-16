@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>药物ATC分类</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/layui/css/layui.css" media="all">
+</head>
+<body background="/static/img/bk1.jpg" style="background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+<!--<body background="/static/img/bk5.jpg" style="background-size: 100% 200%">-->
+<div style="position:fixed;top:0;width: 100%">
+    <ul class="layui-nav layui-bg-cyan">
+        <li class="layui-nav-item" style="font-size: 35px;">药物ATC分类系统</li>
+        <li class="layui-nav-item" style="margin-left: 50%"><a href="index"
+                                                                           style="font-size: 20px;">少量预测</a>
+        </li>
+        <li class="layui-nav-item"><a href="batch" style="font-size: 20px;">批量预测</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;" style="font-size: 20px;">关于系统</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="description">系统描述</a></dd>
+                <dd><a href="references">参考文献</a></dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<br><br><br>
+<div style="background-color: rgba(255,255,255,0.6)">
+    <br><br>
+    <p style="font-size: 25px; margin-left: 40%">SMILES数据输入格式：</p>
+    <br><br><br>
+    <p style="margin-left: 15%; margin-right: 15%; font-size: 20px;">
+        >Compound-1<br>
+        OC(CC(C(=O)O)(CC(=O)O)O)=O<br><br>
+        >Compound-2<br>
+        COC32C1NC1CN3c4c(c(c(c(c4C2COC(=O)N)=O)N)C)=O<br><br>
+        >Compound-3<br>
+        OC(CC2=C(C(c3ccc(cc32)F)=Cc1ccc(S(=O)C)cc1)C)=O<br><br><br>
+        <!--</p>-->
+        <!--<p>-->
+        说明：<br>
+        1.输入的第一行数据是药物的名称或者编号，且以“>”开头；第二行的数据则是该药物的SMILES结构。<br>
+        2.SMILES(Simplified molecular input line entry specification),
+        即简化分子线性输入规范，是一种用ASCII字符串明确描述分子结构的规范。
+    </p>
+
+    <div align="center">
+    <button class="layui-btn layui-btn-warm layui-btn-radius" onclick="jump()" style="background-color: deepskyblue">
+        返回首页
+    </button>
+
+</div><br>
+</div>
+<br>
+
+
+</body>
+<script src="/static/layui/layui.js" charset="utf-8"></script>
+<script language="javascript" type="text/javascript">
+    function jump() {
+        window.location.href = 'index';
+    }
+</script>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function () {
+        var element = layui.element;
+
+        //…
+    });
+</script>
+</html>

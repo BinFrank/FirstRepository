@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>药物ATC分类</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/layui/css/layui.css" media="all">
+</head>
+<body background="/static/img/bk3.jpg"
+      style="background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+<div style="position:fixed;top:0;width: 100%">
+    <ul class="layui-nav layui-bg-cyan">
+        <li class="layui-nav-item" style="font-size: 35px;">药物ATC分类系统</li>
+        <li class="layui-nav-item" style="margin-left: 50%"><a href="index"
+                                                                           style="font-size: 20px;">少量预测</a>
+        </li>
+        <li class="layui-nav-item"><a href="batch" style="font-size: 20px;">批量预测</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;" style="font-size: 20px;">关于系统</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="description">系统描述</a></dd>
+                <dd><a href="references">参考文献</a></dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<br><br><br><br>
+<div style="background-color: rgba(255,255,255,0.5)">
+    <div align="left" style="margin-left:200px;">
+        <br>
+        <p style="font-size: 25px; margin-left: 20%">ATC药物分类方法把药物分成以下14个类别：</p>
+        <br>
+        <!--（1）alimentary tract and metabolism 消化道及代谢<br>-->
+        <!--（2）blood and blood forming organs 血液和造血器官<br>-->
+        <!--（3）cardiovascular system 心血管系统<br>-->
+        <!--（4）dermatologicals 皮肤病用药<br>-->
+        <!--（5）genito urinary system and sex hormones 生殖泌尿系统和性激素<br>-->
+        <!--（6）systemic hormonal preparations, excluding sex hormones and insulins 非性激素和胰岛素类的激素类系统用药<br>-->
+        <!--（7）anti-infectives for systemic use 系统用抗感染药<br>-->
+        <!--（8）antineoplastic and immunomodulating agents 抗肿瘤药和免疫机能调节药<br>-->
+        <!--（9）musculoskeletal system 肌肉-骨骼系统<br>-->
+        <!--（10）nervous system 神经系统<br>-->
+        <!--（11）antiparasitic products, insecticides and repellents 抗寄生虫药、杀虫药和驱虫药<br>-->
+        <!--（12）respiratory system 呼吸系统<br>-->
+        <!--（13）sensory organs 感觉器官<br>-->
+        <!--（14）various 杂类<br>-->
+        <!--<p style="margin-left: 10%; margin-right: 45%; font-size: 20px;">-->
+        <!--（1）消化道及代谢<br>-->
+        <!--（2）血液和造血器官<br>-->
+        <!--（3）心血管系统<br>-->
+        <!--（4）皮肤病用药<br>-->
+        <!--（5）生殖泌尿系统和性激素<br>-->
+        <!--（6）非性激素和胰岛素类的激素类系统用药<br>-->
+        <!--（7）系统用抗感染药<br>-->
+        <!--（8）抗肿瘤药和免疫机能调节药<br>-->
+        <!--（9）肌肉-骨骼系统<br>-->
+        <!--（10）神经系统<br>-->
+        <!--（11）抗寄生虫药、杀虫药和驱虫药<br>-->
+        <!--（12）呼吸系统<br>-->
+        <!--（13）感觉器官<br>-->
+        <!--（14）杂类<br>-->
+        <!--</p>-->
+        <div style="margin-left: 23%;">
+            <table style="font-size: 20px">
+                <thead>
+                <tr>
+                    <th style="width: 100px;">类别编号</th>
+                    <th style="width: 400px">类别名称</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>1</th>
+                    <th align="left">消化道及代谢</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th align="left">血液和造血器官</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th align="left">心血管系统</th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <th align="left">皮肤病用药</th>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <th align="left">生殖泌尿系统和性激素</th>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <th align="left">非性激素和胰岛素类的激素类系统用药</th>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <th align="left">系统用抗感染药</th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <th align="left">抗肿瘤药和免疫机能调节药</th>
+                </tr>
+                <tr>
+                    <th>9</th>
+                    <th align="left">肌肉-骨骼系统</th>
+                </tr>
+                <tr>
+                    <th>10</th>
+                    <th align="left">神经系统</th>
+                </tr>
+                <tr>
+                    <th>11</th>
+                    <th align="left">抗寄生虫药、杀虫药和驱虫药</th>
+                </tr>
+                <tr>
+                    <th>12</th>
+                    <th align="left">呼吸系统</th>
+                </tr>
+                <tr>
+                    <th>13</th>
+                    <th align="left">感觉器官</th>
+                </tr>
+                <tr>
+                    <th>14</th>
+                    <th align="left">杂类</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div style="margin-left: 10px">
+        <div align="center">
+            <table border="1" cellspacing="0" style="border-color: #00F7DE">
+                <tr>
+                    <td width="100">化合物名称</td>
+                    <td width="100">预测类别</td>
+                </tr>
+                {% for key,value in predict_dict.items %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <br>
+        <div align="center">
+            <button class="layui-btn layui-btn-normal layui-btn-radius" onclick="jump()"
+                    style="background-color: deepskyblue">
+                继续预测
+            </button>
+        </div>
+        <br>
+    </div>
+</div>
+</body>
+<script src="/static/layui/layui.js" charset="utf-8"></script>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function () {
+        var element = layui.element;
+
+        //…
+    });
+</script>
+<script language="javascript" type="text/javascript">
+    function jump() {
+        window.location.href = 'index';
+    }
+</script>
+</html>
