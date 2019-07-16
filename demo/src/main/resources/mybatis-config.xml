@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置全局属性-->
+    <settings>
+        <!--使用jdbc的useGeneratedKeys获取数据库自增主键值-->
+        <setting name="useGeneratedKeys" value="true"/>
+
+        <!--使用列标签替换列别名，默认为true-->
+        <setting name="useColumnLabel" value="true"/>
+
+        <!--开启驼峰命名替换-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <!--<environments default="sqlserver">-->
+        <!--<environment id="sqlserver">-->
+            <!--<transactionManager type="JDBC"/>-->
+            <!--&lt;!&ndash;    配置数据库连接池 &ndash;&gt;-->
+            <!--<dataSource type="POOLED">-->
+                <!--<property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>-->
+                <!--<property name="url" value="jdbc:sqlserver://localhost:1433;DataBaseName=student"/>-->
+                <!--<property name="username" value="sa"/>-->
+                <!--<property name="password" value="123"/>-->
+            <!--</dataSource>-->
+        <!--</environment>-->
+    <!--</environments>-->
+    <!--<mappers>-->
+        <!--<mapper resource="cn/swjd/mapper/StudentMapper.xml"/>-->
+    <!--</mappers>-->
+</configuration>

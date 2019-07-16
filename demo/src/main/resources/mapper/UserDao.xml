@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.UserDao">
+    <sql id="baseSql">
+        u_id userId,
+        u_name userName,
+        u_age userAge,
+        u_gender userGender,
+        u_password userPassword
+    </sql>
+    <select id="getAllUser" resultType="com.example.demo.entity.User">
+        SELECT <include refid="baseSql"/>
+        FROM user;
+    </select>
+
+    <select id="getUserById" resultType="com.example.demo.entity.User">
+        SELECT <include refid="baseSql"/>
+        FROM user
+        WHERE u_id = #{userId}
+    </select>
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="userId" keyColumn="u_id" parameterType="com.example.demo.entity.User">
+        INSERT INTO
+        user(u_name,u_age,u_gender,u_password)
+        VALUES
+        (#{userName},#{userAge},#{userGender},#{userPassword})
+    </insert>
+
+    <update id="updataUser" parameterType="com.example.demo.entity.User">
+        UPDATE user
+        <set>
+            <if test="userName != null">
+                u_name = #{userName},
+            </if>
+            <if test="userAge != null">
+                u_age = #{userAge},
+            </if>
+            <if test="userGender != null">
+                u_gender = #{userGender},
+            </if>
+            <if test="userPassword != null">
+                u_password = #{userPassword}
+            </if>
+        </set>
+        WHERE u_id = #{userId}
+    </update>
+
+    <delete id="deleteUser">
+        DELETE FROM
+        user
+        WHERE u_id = #{userId}
+    </delete>
+</mapper>
